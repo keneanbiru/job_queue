@@ -1,0 +1,8 @@
+CREATE TABLE jobs (
+    id SERIAL PRIMARY KEY,
+    type VARCHAR(50) NOT NULL,
+    payload JSONB,
+    status VARCHAR(20) DEFAULT 'queued',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
